@@ -1,11 +1,11 @@
 {
-  "name": "hdkey",
+  "name": "hdkey-wasm",
   "version": "1.1.0",
-  "description": "Bitcoin BIP32 hierarchical deterministic keys",
+  "description": "Bitcoin BIP32 hierarchical deterministic keys, uses bitcoin-ts as its base instead of secp256k1-node",
   "main": "lib/hdkey.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/cryptocoinjs/hdkey"
+    "url": "git://github.com/ARitz-Cracker/hdkey-wasm"
   },
   "license": "MIT",
   "keywords": [
@@ -18,31 +18,12 @@
     "crypto"
   ],
   "bugs": {
-    "url": "https://github.com/cryptocoinjs/hdkey/issues"
+    "url": "https://github.com/ARitz-Cracker/hdkey-wasm/issues"
   },
-  "homepage": "https://github.com/cryptocoinjs/hdkey",
-  "devDependencies": {
-    "bigi": "^1.1.0",
-    "coveralls": "^2.10.0",
-    "ecurve": "^1.0.0",
-    "istanbul": "^0.3.17",
-    "mocha": "^2.2.5",
-    "mocha-lcov-reporter": "0.0.1",
-    "mochify": "^2.10.0",
-    "secure-random": "^1.0.0",
-    "standard": "^7.1.1"
-  },
+  "homepage": "https://github.com/ARitz-Cracker/hdkey-wasm",
   "dependencies": {
-    "coinstring": "^2.0.0",
-    "safe-buffer": "^5.1.1",
-    "secp256k1": "^3.0.1"
-  },
-  "scripts": {
-    "lint": "standard",
-    "browser-test": "mochify --wd -R spec",
-    "test": "standard && mocha",
-    "unit": "mocha",
-    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --reporter list test/*.js",
-    "coveralls": "npm run-script coverage && node ./node_modules/.bin/coveralls < coverage/lcov.info"
+    "arc-bufferlib": "^0.9.1",
+    "bitcoin-ts": "^1.4.0",
+    "pbkdf2-wasm": "^0.8.1"
   }
 }
